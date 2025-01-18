@@ -4,8 +4,9 @@ import { useState } from "react";
 import DDLvehicleMakes from "./DDLvehicleMakes";
 import DDLvehicleModel from "./DDLvehicleModel";
 import Link from "next/link";
+import { IResults } from "../@types/VehicleData";
 
-export default function VehicleFilter() {
+export default function VehicleFilter({ makes }: { makes: IResults[] }) {
   const [filter, setFilter] = useState({ makeId: "", year: "" });
   const handleMakeChange = (value: string) => {
     setFilter((prev) => ({ ...prev, makeId: value }));
@@ -19,6 +20,7 @@ export default function VehicleFilter() {
     <div className="bg-foreground w-full h-80 rounded-lg flex flex-col gap-4 py-4 px-2 items-center">
       <div className="w-full flex gap-2 flex-wrap justify-center mb-auto">
         <DDLvehicleMakes
+          makes={makes}
           make={filter.makeId}
           handleMakeChange={handleMakeChange}
         />

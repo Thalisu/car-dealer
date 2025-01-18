@@ -1,15 +1,9 @@
+import { IResults } from "@/app/@types/VehicleData";
 import LoadingSpinner from "@/app/components/LoadingSpinner";
 import VehicleModels from "@/app/components/VehicleModels";
 import { poppins } from "@/app/lib/fonts";
 import { currentYears } from "@/app/lib/utils";
 import { Suspense } from "react";
-
-interface IResults {
-  MakeId: number;
-  MakeName: string;
-  VehicleTypeId: number;
-  VehicleTypeName: string;
-}
 
 export async function generateStaticParams() {
   try {
