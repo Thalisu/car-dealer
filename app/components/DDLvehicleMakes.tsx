@@ -1,4 +1,4 @@
-import { IResults } from "../@types/VehicleData";
+import { IResults } from "../types/VehicleData";
 interface IProps {
   make: string;
   makes: IResults[];

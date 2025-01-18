@@ -4,7 +4,7 @@ import { useState } from "react";
 import DDLvehicleMakes from "./DDLvehicleMakes";
 import DDLvehicleModel from "./DDLvehicleModel";
 import Link from "next/link";
-import { IResults } from "../@types/VehicleData";
+import { IResults } from "../types/VehicleData";
 
 export default function VehicleFilter({ makes }: { makes: IResults[] }) {
   const [filter, setFilter] = useState({ makeId: "", year: "" });

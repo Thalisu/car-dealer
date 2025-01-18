@@ -1,4 +1,4 @@
-import { IResults } from "./@types/VehicleData";
+import { IResults } from "./types/VehicleData";
 import VehicleFilter from "./components/VehicleFilter";
 import { poppins } from "./lib/fonts";
 
